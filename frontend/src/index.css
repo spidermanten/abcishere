@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Color Palette */
+
   --primary-purple: #7c3aed;
   --primary-purple-dark: #5b21b6;
   --primary-purple-light: #a78bfa;
   --accent-blue: #3b82f6;
   --accent-cyan: #06b6d4;
 
-  /* Background Colors */
+
   --bg-dark: #0f0a1f;
   --bg-darker: #0a0514;
   --bg-purple: #1e1139;
   --bg-card: rgba(88, 28, 135, 0.3);
   --bg-card-hover: rgba(109, 40, 217, 0.4);
 
-  /* Border & Glass Effects */
+
   --border-glass: rgba(167, 139, 250, 0.2);
   --border-glass-hover: rgba(167, 139, 250, 0.4);
   --glass-backdrop: blur(10px);
 
-  /* Text Colors */
+
   --text-primary: #ffffff;
   --text-secondary: #e9d5ff;
   --text-muted: #c4b5fd;
 
-  /* Shadows & Glows */
+
   --shadow-purple: 0 0 20px rgba(124, 58, 237, 0.3);
   --shadow-purple-strong: 0 0 40px rgba(124, 58, 237, 0.6);
   --glow-purple: 0 0 30px rgba(124, 58, 237, 0.8);
@@ -47,7 +47,7 @@ body {
   min-height: 100vh;
 }
 
-/* Starfield Background Effect */
+
 body::before {
   content: '';
   position: fixed;
@@ -85,7 +85,7 @@ body::before {
   }
 }
 
-/* Additional star layers for depth */
+
 body::after {
   content: '';
   position: fixed;
@@ -114,7 +114,7 @@ code {
   color: var(--primary-purple-light);
 }
 
-/* Scrollbar Styling */
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -133,7 +133,7 @@ code {
   background: var(--primary-purple-light);
 }
 
-/* Selection Styling */
+
 ::selection {
   background: var(--primary-purple);
   color: white;
@@ -144,7 +144,7 @@ code {
   color: white;
 }
 
-/* Form Elements Styling */
+
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -211,18 +211,18 @@ select {
   -moz-appearance: none;
 }
 
-/* Placeholder Styling */
+
 ::placeholder {
   color: var(--text-muted);
   opacity: 0.6;
 }
 
-/* Button Styling */
+
 button {
   font-family: 'Inter', sans-serif;
 }
 
-/* ReactFlow specific overrides */
+
 .react-flow__node {
   font-family: 'Inter', sans-serif;
 }

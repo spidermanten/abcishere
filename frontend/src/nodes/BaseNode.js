@@ -1,4 +1,4 @@
-// BaseNode.js
+
 import { Handle, Position } from 'reactflow';
 
 export const BaseNode = ({
@@ -37,7 +37,7 @@ export const BaseNode = ({
                 e.currentTarget.style.borderColor = 'rgba(167, 139, 250, 0.3)';
             }}
         >
-            {/* Node Title */}
+
             <div
                 style={{
                     fontWeight: 600,
@@ -52,7 +52,7 @@ export const BaseNode = ({
                 {title}
             </div>
 
-            {/* Node Content */}
+
             <div style={{
                 fontSize: '13px',
                 color: '#ffffff',
@@ -60,7 +60,7 @@ export const BaseNode = ({
                 {children}
             </div>
 
-            {/* Left Handles (Inputs) */}
+
             {leftHandles.map((handle, index) => (
                 <Handle
                     key={handle.id}
@@ -79,7 +79,7 @@ export const BaseNode = ({
                 />
             ))}
 
-            {/* Right Handles (Outputs) */}
+
             {rightHandles.map((handle, index) => (
                 <Handle
                     key={handle.id}

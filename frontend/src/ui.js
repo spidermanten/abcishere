@@ -1,6 +1,4 @@
-// ui.js
-// Displays the drag-and-drop UI
-// --------------------------------------------------
+
 
 import { useState, useRef, useCallback } from 'react';
 import ReactFlow, { Controls, Background, MiniMap } from 'reactflow';
@@ -45,7 +43,7 @@ const selector = (state) => ({
   onConnect: state.onConnect,
 });
 
-// Custom edge styles
+
 const defaultEdgeOptions = {
   type: 'smoothstep',
   animated: true,

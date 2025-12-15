@@ -10,15 +10,15 @@ export const TextNode = ({ id, data }) => {
     setCurrText(e.target.value);
   };
 
-  // Calculate dynamic width based on text content
+
   useEffect(() => {
     if (textareaRef.current) {
-      // Reset height to auto to get the correct scrollHeight
+
       textareaRef.current.style.height = 'auto';
-      // Set height to scrollHeight to fit content
+
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
 
-      // Calculate width based on text length (with min and max constraints)
+
       const textLength = currText.length;
       const calculatedWidth = Math.max(150, Math.min(500, 150 + textLength * 2));
       setNodeWidth(calculatedWidth);

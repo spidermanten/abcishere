@@ -7,14 +7,14 @@ export const MergeNode = ({ id, data }) => {
 
     const handleInputCountChange = (e) => {
         const value = parseInt(e.target.value) || 2;
-        setNumInputs(Math.min(Math.max(value, 2), 6)); // Min 2, Max 6 inputs
+        setNumInputs(Math.min(Math.max(value, 2), 6));
     };
 
     const handleStrategyChange = (e) => {
         setMergeStrategy(e.target.value);
     };
 
-    // Generate dynamic left handles based on number of inputs
+
     const leftHandles = Array.from({ length: numInputs }, (_, i) => ({
         id: `${id}-input-${i + 1}`
     }));

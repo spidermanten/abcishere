@@ -66,9 +66,7 @@ def is_dag(nodes: List[Dict[str, Any]], edges: List[Dict[str, Any]]) -> bool:
 
 @app.post('/pipelines/parse')
 def parse_pipeline(pipeline: PipelineData):
-    """
-    Parse the pipeline and return the number of nodes, edges, and whether it's a DAG.
-    """
+
     num_nodes = len(pipeline.nodes)
     num_edges = len(pipeline.edges)
     is_dag_result = is_dag(pipeline.nodes, pipeline.edges)
