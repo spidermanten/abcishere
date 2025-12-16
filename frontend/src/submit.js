@@ -44,7 +44,7 @@ export const SubmitButton = () => {
             <button
                 type="submit"
                 onClick={handleSubmit}
-                className="px-8 py-3 text-[15px] font-semibold tracking-wide text-white bg-gradient-to-br from-primary-purple to-primary-purple-light border border-primary-purple-light/40 rounded-[10px] cursor-pointer shadow-[0_4px_16px_0_rgba(124,58,237,0.4),inset_0_1px_0_0_rgba(255,255,255,0.2)] transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:scale-105 hover:shadow-[0_8px_24px_0_rgba(124,58,237,0.6),inset_0_1px_0_0_rgba(255,255,255,0.3)] hover:from-[#8b5cf6] hover:to-[#c4b5fd] active:scale-95 active:translate-y-0"
+                className="px-8 py-2 text-[15px] font-semibold tracking-wide text-white bg-gradient-to-br from-primary-purple to-primary-purple-light border border-primary-purple-light/40 rounded-[10px] cursor-pointer shadow-[0_4px_16px_0_rgba(124,58,237,0.4),inset_0_1px_0_0_rgba(255,255,255,0.2)] transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:scale-105 hover:shadow-[0_8px_24px_0_rgba(124,58,237,0.6),inset_0_1px_0_0_rgba(255,255,255,0.3)] hover:from-[#8b5cf6] hover:to-[#c4b5fd] active:scale-95 active:translate-y-0"
             >
                 Submit Pipeline
             </button>

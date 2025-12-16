@@ -5,7 +5,7 @@ import { DraggableNode } from './draggableNode';
 export const PipelineToolbar = () => {
 
     return (
-        <div className="p-5 bg-gradient-to-br from-primary-purple-dark/20 to-primary-purple/15 backdrop-blur-md border-b border-primary-purple-light/20 shadow-[0_4px_16px_0_rgba(124,58,237,0.1)]">
+        <div className="p-3 bg-gradient-to-br from-primary-purple-dark/20 to-primary-purple/15 backdrop-blur-md border-b border-primary-purple-light/20 shadow-[0_4px_16px_0_rgba(124,58,237,0.1)]">
             <h2 className="m-0 mb-4 text-text-secondary text-lg font-semibold tracking-wide drop-shadow-[0_2px_8px_rgba(124,58,237,0.5)]">
                 Node Palette
             </h2>

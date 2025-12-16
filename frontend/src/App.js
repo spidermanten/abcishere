@@ -11,7 +11,9 @@ function App() {
     }}>
       <PipelineToolbar />
       <PipelineUI />
-      <SubmitButton />
+      <div className="fixed bottom-0 w-full">
+        <SubmitButton />
+      </div>
     </div>
   );
 }
