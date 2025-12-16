@@ -112,12 +112,7 @@ export const PipelineUI = () => {
 
   return (
     <>
-      <div ref={reactFlowWrapper} style={{
-        width: '100vw',
-        height: '70vh',
-        position: 'relative',
-        background: 'transparent',
-      }}>
+      <div ref={reactFlowWrapper} className="w-screen h-[70vh] relative bg-transparent">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -137,36 +132,20 @@ export const PipelineUI = () => {
             strokeWidth: 2,
             strokeDasharray: '5, 5',
           }}
-          style={{
-            background: 'transparent',
-          }}
+          className="bg-transparent"
         >
           <Background
             color="rgba(167, 139, 250, 0.15)"
             gap={gridSize}
-            style={{
-              background: 'transparent',
-            }}
+            className="bg-transparent"
           />
           <Controls
-            style={{
-              background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.4) 0%, rgba(109, 40, 217, 0.3) 100%)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(167, 139, 250, 0.3)',
-              borderRadius: '8px',
-              boxShadow: '0 4px 16px 0 rgba(124, 58, 237, 0.3)',
-            }}
+            className="!bg-gradient-to-br !from-primary-purple-dark/40 !to-primary-purple/30 !backdrop-blur-md !border !border-primary-purple-light/30 !rounded-lg !shadow-[0_4px_16px_0_rgba(124,58,237,0.3)] [&>button]:!bg-transparent [&>button]:!border-primary-purple-light/20 [&>button]:!text-text-secondary hover:[&>button]:!bg-primary-purple-dark/50 hover:[&>button]:!text-white [&>button_svg]:!fill-current"
           />
           <MiniMap
             nodeColor={() => '#7c3aed'}
             maskColor="rgba(15, 10, 31, 0.8)"
-            style={{
-              background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.4) 0%, rgba(109, 40, 217, 0.3) 100%)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(167, 139, 250, 0.3)',
-              borderRadius: '8px',
-              boxShadow: '0 4px 16px 0 rgba(124, 58, 237, 0.3)',
-            }}
+            className="!bg-gradient-to-br !from-primary-purple-dark/40 !to-primary-purple/30 !backdrop-blur-md !border !border-primary-purple-light/30 !rounded-lg !shadow-[0_4px_16px_0_rgba(124,58,237,0.3)]"
           />
         </ReactFlow>
       </div>

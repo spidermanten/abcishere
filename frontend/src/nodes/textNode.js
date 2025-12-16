@@ -51,18 +51,13 @@ export const TextNode = ({ id, data }) => {
       width={nodeWidth}
     >
       <div>
-        <label style={{ display: 'block', width: '100%' }}>
+        <label className="block w-full text-text-secondary text-xs font-medium tracking-wide">
           Text:
           <textarea
             ref={textareaRef}
             value={currText}
             onChange={handleTextChange}
-            style={{
-              width: '100%',
-              minHeight: '40px',
-              resize: 'none',
-              overflow: 'hidden',
-            }}
+            className="w-full mt-1 px-3 py-2 bg-black/30 border border-primary-purple-light/30 rounded-lg text-text-primary text-[13px] focus:border-primary-purple-light focus:bg-black/50 focus:ring-2 focus:ring-primary-purple/20 transition-all outline-none resize-none overflow-hidden"
             rows={1}
           />
         </label>

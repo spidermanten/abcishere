@@ -11,55 +11,16 @@ export const BaseNode = ({
 }) => {
     return (
         <div
-            style={{
-                width,
-                minHeight: height,
-                border: '1px solid rgba(167, 139, 250, 0.3)',
-                borderRadius: 12,
-                padding: 16,
-                background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.4) 0%, rgba(109, 40, 217, 0.3) 100%)',
-                backdropFilter: 'blur(10px)',
-                WebkitBackdropFilter: 'blur(10px)',
-                boxShadow: '0 8px 32px 0 rgba(124, 58, 237, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
-                position: 'relative',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                color: '#ffffff',
-            }}
-            className="base-node"
-            onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(124, 58, 237, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)';
-                e.currentTarget.style.borderColor = 'rgba(167, 139, 250, 0.5)';
-            }}
-            onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(124, 58, 237, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)';
-                e.currentTarget.style.borderColor = 'rgba(167, 139, 250, 0.3)';
-            }}
+            style={{ width, minHeight: height }}
+            className="base-node relative p-4 rounded-xl border border-primary-purple-light/30 bg-gradient-to-br from-primary-purple-dark/40 to-primary-purple/30 backdrop-blur-md shadow-[0_8px_32px_0_rgba(124,58,237,0.2),inset_0_1px_0_0_rgba(255,255,255,0.1)] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_0_rgba(124,58,237,0.4),inset_0_1px_0_0_rgba(255,255,255,0.15)] hover:border-primary-purple-light/50 group"
         >
-
-            <div
-                style={{
-                    fontWeight: 600,
-                    marginBottom: 12,
-                    textAlign: 'center',
-                    fontSize: '14px',
-                    letterSpacing: '0.5px',
-                    color: '#e9d5ff',
-                    textShadow: '0 2px 8px rgba(124, 58, 237, 0.5)',
-                }}
-            >
+            <div className="font-semibold mb-3 text-center text-sm tracking-wide text-text-secondary drop-shadow-[0_2px_8px_rgba(124,58,237,0.5)]">
                 {title}
             </div>
 
-
-            <div style={{
-                fontSize: '13px',
-                color: '#ffffff',
-            }}>
+            <div className="text-[13px] text-text-primary">
                 {children}
             </div>
-
 
             {leftHandles.map((handle, index) => (
                 <Handle
@@ -67,18 +28,12 @@ export const BaseNode = ({
                     type="target"
                     position={Position.Left}
                     id={handle.id}
+                    className="!w-3 !h-3 !bg-gradient-to-br !from-primary-purple !to-primary-purple-light !border-2 !border-primary-purple-light/50 shadow-[0_0_10px_rgba(124,58,237,0.6)] transition-all duration-200 hover:!bg-gradient-to-br hover:!from-[#8b5cf6] hover:!to-text-muted hover:shadow-[0_0_15px_rgba(124,58,237,0.8)]"
                     style={{
                         top: 40 + index * 20,
-                        width: 12,
-                        height: 12,
-                        background: 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)',
-                        border: '2px solid rgba(167, 139, 250, 0.5)',
-                        boxShadow: '0 0 10px rgba(124, 58, 237, 0.6)',
-                        transition: 'all 0.2s ease',
                     }}
                 />
             ))}
-
 
             {rightHandles.map((handle, index) => (
                 <Handle
@@ -86,14 +41,9 @@ export const BaseNode = ({
                     type="source"
                     position={Position.Right}
                     id={handle.id}
+                    className="!w-3 !h-3 !bg-gradient-to-br !from-primary-purple !to-primary-purple-light !border-2 !border-primary-purple-light/50 shadow-[0_0_10px_rgba(124,58,237,0.6)] transition-all duration-200 hover:!bg-gradient-to-br hover:!from-[#8b5cf6] hover:!to-text-muted hover:shadow-[0_0_15px_rgba(124,58,237,0.8)]"
                     style={{
                         top: 40 + index * 20,
-                        width: 12,
-                        height: 12,
-                        background: 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)',
-                        border: '2px solid rgba(167, 139, 250, 0.5)',
-                        boxShadow: '0 0 10px rgba(124, 58, 237, 0.6)',
-                        transition: 'all 0.2s ease',
                     }}
                 />
             ))}

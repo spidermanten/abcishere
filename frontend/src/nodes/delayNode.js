@@ -27,64 +27,31 @@ export const DelayNode = ({ id, data }) => {
             title="⏱️ Delay"
             leftHandles={leftHandles}
             rightHandles={rightHandles}
-            width={220}
+            width={280}
         >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <label style={{ display: 'flex', flexDirection: 'column', fontSize: '13px', color: '#e9d5ff' }}>
-                    <span style={{ marginBottom: '6px', fontWeight: '500', letterSpacing: '0.3px' }}>Duration:</span>
-                    <div style={{ display: 'flex', gap: '8px' }}>
+            <div className="flex flex-col gap-3">
+                <label className="block text-text-secondary text-xs font-medium tracking-wide">
+                    Duration:
+                    <div className="flex gap-2 mt-1">
                         <input
                             type="number"
                             value={delayTime}
                             onChange={handleDelayChange}
                             min="0"
-                            className="nodrag"
-                            style={{
-                                flex: 2,
-                                padding: '8px 10px',
-                                border: '1px solid rgba(167, 139, 250, 0.3)',
-                                borderRadius: '8px',
-                                fontSize: '13px',
-                                background: 'rgba(0, 0, 0, 0.3)',
-                                color: '#fff',
-                                outline: 'none',
-                                transition: 'all 0.2s ease',
-                            }}
-                            onFocus={(e) => e.target.style.borderColor = 'rgba(167, 139, 250, 0.8)'}
-                            onBlur={(e) => e.target.style.borderColor = 'rgba(167, 139, 250, 0.3)'}
+                            className="nodrag flex-[2] px-3 py-2 bg-black/30 border border-primary-purple-light/30 rounded-lg text-text-primary text-[13px] focus:border-primary-purple-light focus:bg-black/50 focus:ring-2 focus:ring-primary-purple/20 transition-all outline-none"
                         />
                         <select
                             value={unit}
                             onChange={handleUnitChange}
-                            className="nodrag"
-                            style={{
-                                flex: 1,
-                                padding: '8px 4px',
-                                border: '1px solid rgba(167, 139, 250, 0.3)',
-                                borderRadius: '8px',
-                                fontSize: '13px',
-                                background: 'rgba(0, 0, 0, 0.3)',
-                                color: '#fff',
-                                outline: 'none',
-                                cursor: 'pointer',
-                            }}
+                            className="nodrag flex-1 px-3 py-2 bg-black/30 border border-primary-purple-light/30 rounded-lg text-text-primary text-[13px] focus:border-primary-purple-light focus:bg-black/50 focus:ring-2 focus:ring-primary-purple/20 transition-all outline-none appearance-none cursor-pointer"
                         >
-                            <option value="ms" style={{ background: '#2e1065' }}>ms</option>
-                            <option value="s" style={{ background: '#2e1065' }}>s</option>
-                            <option value="m" style={{ background: '#2e1065' }}>min</option>
+                            <option value="ms" className="bg-primary-purple-dark text-white">ms</option>
+                            <option value="s" className="bg-primary-purple-dark text-white">s</option>
+                            <option value="m" className="bg-primary-purple-dark text-white">min</option>
                         </select>
                     </div>
                 </label>
-                <div style={{
-                    fontSize: '12px',
-                    color: '#c4b5fd',
-                    padding: '8px',
-                    background: 'rgba(139, 92, 246, 0.1)',
-                    borderRadius: '8px',
-                    textAlign: 'center',
-                    border: '1px solid rgba(167, 139, 250, 0.1)',
-                    fontStyle: 'italic',
-                }}>
+                <div className="mt-1 text-[11px] text-text-muted p-2 bg-primary-purple-light/10 rounded border border-primary-purple-light/20 italic text-center">
                     Wait for {delayTime} {unit === 'm' ? 'minutes' : unit === 's' ? 'seconds' : 'milliseconds'}
                 </div>
             </div>

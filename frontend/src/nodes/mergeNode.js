@@ -30,36 +30,25 @@ export const MergeNode = ({ id, data }) => {
             rightHandles={rightHandles}
             width={240}
         >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <label style={{ display: 'flex', flexDirection: 'column', fontSize: '12px' }}>
-                    <span style={{ marginBottom: '4px', fontWeight: '500' }}>Number of Inputs:</span>
+            <div className="flex flex-col gap-3">
+                <label className="block text-text-secondary text-xs font-medium tracking-wide">
+                    Number of Inputs:
                     <input
                         type="number"
                         value={numInputs}
                         onChange={handleInputCountChange}
                         min="2"
                         max="6"
-                        style={{
-                            padding: '6px',
-                            border: '1px solid #ccc',
-                            borderRadius: '4px',
-                            fontSize: '13px',
-                        }}
+                        className="w-full px-3 py-2 mt-1 bg-black/30 border border-primary-purple-light/30 rounded-lg text-text-primary text-[13px] focus:border-primary-purple-light focus:bg-black/50 focus:ring-2 focus:ring-primary-purple/20 transition-all outline-none"
                     />
                 </label>
 
-                <label style={{ display: 'flex', flexDirection: 'column', fontSize: '12px' }}>
-                    <span style={{ marginBottom: '4px', fontWeight: '500' }}>Merge Strategy:</span>
+                <label className="block text-text-secondary text-xs font-medium tracking-wide">
+                    Merge Strategy:
                     <select
                         value={mergeStrategy}
                         onChange={handleStrategyChange}
-                        style={{
-                            padding: '6px',
-                            border: '1px solid #ccc',
-                            borderRadius: '4px',
-                            fontSize: '13px',
-                            background: 'white',
-                        }}
+                        className="w-full px-3 py-2 mt-1 bg-black/30 border border-primary-purple-light/30 rounded-lg text-text-primary text-[13px] focus:border-primary-purple-light focus:bg-black/50 focus:ring-2 focus:ring-primary-purple/20 transition-all outline-none appearance-none cursor-pointer"
                     >
                         <option value="concat">Concatenate</option>
                         <option value="array">Array</option>
@@ -68,14 +57,7 @@ export const MergeNode = ({ id, data }) => {
                     </select>
                 </label>
 
-                <div style={{
-                    fontSize: '11px',
-                    color: '#666',
-                    padding: '6px',
-                    background: '#f0f8ff',
-                    borderRadius: '3px',
-                    border: '1px solid #d0e8ff'
-                }}>
+                <div className="mt-1 text-[11px] text-text-muted p-2 bg-primary-purple-light/10 rounded border border-primary-purple-light/20 italic">
                     <strong>Active:</strong> {numInputs} inputs → 1 output
                     <br />
                     <strong>Mode:</strong> {mergeStrategy}

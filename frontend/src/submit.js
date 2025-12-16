@@ -40,49 +40,11 @@ export const SubmitButton = () => {
     };
 
     return (
-        <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '20px',
-            background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.2) 0%, rgba(109, 40, 217, 0.15) 100%)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            borderTop: '1px solid rgba(167, 139, 250, 0.2)',
-        }}>
+        <div className="flex items-center justify-center p-5 bg-gradient-to-br from-primary-purple-dark/20 to-primary-purple/15 backdrop-blur-md border-t border-primary-purple-light/20">
             <button
                 type="submit"
                 onClick={handleSubmit}
-                style={{
-                    padding: '12px 32px',
-                    fontSize: '15px',
-                    fontWeight: 600,
-                    letterSpacing: '0.5px',
-                    color: '#ffffff',
-                    background: 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)',
-                    border: '1px solid rgba(167, 139, 250, 0.4)',
-                    borderRadius: '10px',
-                    cursor: 'pointer',
-                    boxShadow: '0 4px 16px 0 rgba(124, 58, 237, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.2)',
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-                }}
-                onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
-                    e.currentTarget.style.boxShadow = '0 8px 24px 0 rgba(124, 58, 237, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.3)';
-                    e.currentTarget.style.background = 'linear-gradient(135deg, #8b5cf6 0%, #c4b5fd 100%)';
-                }}
-                onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 4px 16px 0 rgba(124, 58, 237, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.2)';
-                    e.currentTarget.style.background = 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)';
-                }}
-                onMouseDown={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0) scale(0.98)';
-                }}
-                onMouseUp={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
-                }}
+                className="px-8 py-3 text-[15px] font-semibold tracking-wide text-white bg-gradient-to-br from-primary-purple to-primary-purple-light border border-primary-purple-light/40 rounded-[10px] cursor-pointer shadow-[0_4px_16px_0_rgba(124,58,237,0.4),inset_0_1px_0_0_rgba(255,255,255,0.2)] transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:scale-105 hover:shadow-[0_8px_24px_0_rgba(124,58,237,0.6),inset_0_1px_0_0_rgba(255,255,255,0.3)] hover:from-[#8b5cf6] hover:to-[#c4b5fd] active:scale-95 active:translate-y-0"
             >
                 Submit Pipeline
             </button>

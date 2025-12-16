@@ -5,29 +5,11 @@ import { DraggableNode } from './draggableNode';
 export const PipelineToolbar = () => {
 
     return (
-        <div style={{
-            padding: '20px',
-            background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.2) 0%, rgba(109, 40, 217, 0.15) 100%)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            borderBottom: '1px solid rgba(167, 139, 250, 0.2)',
-            boxShadow: '0 4px 16px 0 rgba(124, 58, 237, 0.1)',
-        }}>
-            <h2 style={{
-                margin: '0 0 16px 0',
-                color: '#e9d5ff',
-                fontSize: '18px',
-                fontWeight: 600,
-                letterSpacing: '0.5px',
-                textShadow: '0 2px 8px rgba(124, 58, 237, 0.5)',
-            }}>
+        <div className="p-5 bg-gradient-to-br from-primary-purple-dark/20 to-primary-purple/15 backdrop-blur-md border-b border-primary-purple-light/20 shadow-[0_4px_16px_0_rgba(124,58,237,0.1)]">
+            <h2 className="m-0 mb-4 text-text-secondary text-lg font-semibold tracking-wide drop-shadow-[0_2px_8px_rgba(124,58,237,0.5)]">
                 Node Palette
             </h2>
-            <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '12px',
-            }}>
+            <div className="flex flex-wrap gap-3">
                 <DraggableNode type='customInput' label='Input' />
                 <DraggableNode type='llm' label='LLM' />
                 <DraggableNode type='customOutput' label='Output' />

@@ -16,56 +16,33 @@ export const OutputNode = ({ id, data }) => {
   };
 
   return (
-    <div style={{
-      width: 220,
-      minHeight: 'auto',
-      border: '1px solid rgba(167, 139, 250, 0.3)',
-      borderRadius: 12,
-      padding: 16,
-      background: 'linear-gradient(135deg, rgba(88, 28, 135, 0.4) 0%, rgba(109, 40, 217, 0.3) 100%)',
-      backdropFilter: 'blur(10px)',
-      WebkitBackdropFilter: 'blur(10px)',
-      boxShadow: '0 8px 32px 0 rgba(124, 58, 237, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
-      position: 'relative',
-      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-      color: '#ffffff',
-    }}>
+    <div className="relative w-[220px] min-h-auto p-4 rounded-xl border border-primary-purple-light/30 bg-gradient-to-br from-primary-purple-dark/40 to-primary-purple/30 backdrop-blur-md shadow-[0_8px_32px_0_rgba(124,58,237,0.2),inset_0_1px_0_0_rgba(255,255,255,0.1)] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_0_rgba(124,58,237,0.4),inset_0_1px_0_0_rgba(255,255,255,0.15)] hover:border-primary-purple-light/50 group">
       <Handle
         type="target"
         position={Position.Left}
         id={`${id}-value`}
-        style={{
-          width: 12,
-          height: 12,
-          background: 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)',
-          border: '2px solid rgba(167, 139, 250, 0.5)',
-          boxShadow: '0 0 10px rgba(124, 58, 237, 0.6)',
-          transition: 'all 0.2s ease',
-        }}
+        className="!w-3 !h-3 !bg-gradient-to-br !from-primary-purple !to-primary-purple-light !border-2 !border-primary-purple-light/50 shadow-[0_0_10px_rgba(124,58,237,0.6)] transition-all duration-200 hover:!bg-gradient-to-br hover:!from-[#8b5cf6] hover:!to-text-muted hover:shadow-[0_0_15px_rgba(124,58,237,0.8)]"
       />
-      <div style={{
-        fontWeight: 600,
-        marginBottom: 12,
-        textAlign: 'center',
-        fontSize: '14px',
-        letterSpacing: '0.5px',
-        color: '#e9d5ff',
-        textShadow: '0 2px 8px rgba(124, 58, 237, 0.5)',
-      }}>
+      <div className="font-semibold mb-3 text-center text-sm tracking-wide text-text-secondary drop-shadow-[0_2px_8px_rgba(124,58,237,0.5)]">
         <span>Output</span>
       </div>
-      <div>
-        <label>
+      <div className="flex flex-col gap-3">
+        <label className="block text-text-secondary text-xs font-medium tracking-wide">
           Name:
           <input
             type="text"
+            className="w-full px-3 py-2 mt-1 bg-black/30 border border-primary-purple-light/30 rounded-lg text-text-primary text-[13px] focus:border-primary-purple-light focus:bg-black/50 focus:ring-2 focus:ring-primary-purple/20 transition-all outline-none"
             value={currName}
             onChange={handleNameChange}
           />
         </label>
-        <label>
+        <label className="block text-text-secondary text-xs font-medium tracking-wide">
           Type:
-          <select value={outputType} onChange={handleTypeChange}>
+          <select
+            value={outputType}
+            onChange={handleTypeChange}
+            className="w-full px-3 py-2 mt-1 bg-black/30 border border-primary-purple-light/30 rounded-lg text-text-primary text-[13px] focus:border-primary-purple-light focus:bg-black/50 focus:ring-2 focus:ring-primary-purple/20 transition-all outline-none appearance-none cursor-pointer"
+          >
             <option value="Text">Text</option>
             <option value="File">Image</option>
           </select>
