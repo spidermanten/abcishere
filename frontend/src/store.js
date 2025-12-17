@@ -11,6 +11,8 @@ import {
 export const useStore = create((set, get) => ({
   nodes: [],
   edges: [],
+  reactFlowInstance: null,
+  setReactFlowInstance: (instance) => set({ reactFlowInstance: instance }),
   getNodeID: (type) => {
     const newIDs = { ...get().nodeIDs };
     if (newIDs[type] === undefined) {

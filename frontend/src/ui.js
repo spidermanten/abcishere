@@ -64,7 +64,8 @@ export const PipelineUI = () => {
     addNode,
     onNodesChange,
     onEdgesChange,
-    onConnect
+    onConnect,
+    setReactFlowInstance: setStoreReactFlowInstance
   } = useStore(selector, shallow);
 
   const getInitNodeData = (nodeID, type) => {
@@ -112,7 +113,7 @@ export const PipelineUI = () => {
 
   return (
     <>
-      <div ref={reactFlowWrapper} className="w-screen h-[70vh] relative bg-transparent">
+      <div ref={reactFlowWrapper} className="w-full h-full relative bg-transparent">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -121,7 +122,10 @@ export const PipelineUI = () => {
           onConnect={onConnect}
           onDrop={onDrop}
           onDragOver={onDragOver}
-          onInit={setReactFlowInstance}
+          onInit={(instance) => {
+            setReactFlowInstance(instance);
+            setStoreReactFlowInstance(instance);
+          }}
           nodeTypes={nodeTypes}
           proOptions={proOptions}
           snapGrid={[gridSize, gridSize]}

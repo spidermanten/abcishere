@@ -4,14 +4,12 @@ import { SubmitButton } from './submit';
 
 function App() {
   return (
-    <div style={{
-      position: 'relative',
-      zIndex: 1,
-      minHeight: '100vh',
-    }}>
+    <div className="flex flex-col h-screen overflow-hidden">
       <PipelineToolbar />
-      <PipelineUI />
-      <div className="fixed bottom-0 w-full">
+      <div className="flex-1 relative">
+        <PipelineUI />
+      </div>
+      <div className="p-4 bg-background/50 backdrop-blur-md border-t border-primary-purple-light/20 z-10">
         <SubmitButton />
       </div>
     </div>
