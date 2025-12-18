@@ -41,6 +41,7 @@ const selector = (state) => ({
   onNodesChange: state.onNodesChange,
   onEdgesChange: state.onEdgesChange,
   onConnect: state.onConnect,
+  setReactFlowInstance: state.setReactFlowInstance,
 });
 
 
@@ -149,7 +150,7 @@ export const PipelineUI = () => {
           <MiniMap
             nodeColor={() => '#7c3aed'}
             maskColor="rgba(15, 10, 31, 0.8)"
-            className="!bg-gradient-to-br !from-primary-purple-dark/40 !to-primary-purple/30 !backdrop-blur-md !border !border-primary-purple-light/30 !rounded-lg !shadow-[0_4px_16px_0_rgba(124,58,237,0.3)]"
+            className="!bg-gradient-to-br !from-primary-purple-dark/40 !to-primary-purple/30 !backdrop-blur-md !border !border-primary-purple-light/30 !rounded-lg !shadow-[0_4px_16px_0_rgba(124,58,237,0.3)] !w-[120px] !h-[90px] md:!w-[unset] md:!h-[unset]"
           />
         </ReactFlow>
       </div>
