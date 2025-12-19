@@ -6,12 +6,15 @@
 @layer base {
   body {
     @apply m-0 font-sans antialiased text-text-primary overflow-x-hidden relative min-h-screen;
-    background: linear-gradient(135deg, #1e1139 0%, #0f0a1f 50%, #0a0514 100%);
+    background-color: #030014;
+    background-image:
+      radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0.5px, transparent 1.5px),
+      radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 60%);
+    background-size: 24px 24px, 100% 100%;
+    background-position: 0 0, center;
   }
 
-  ::-webkit-scrollbar {
-    @apply w-[10px] h-[10px];
-  }
+
 
   ::-webkit-scrollbar-track {
     @apply bg-bg-darker;
@@ -28,32 +31,6 @@
   ::selection {
     @apply bg-primary-purple text-white;
   }
-}
-
-body::before {
-  content: '';
-  @apply fixed top-0 left-0 w-full h-full opacity-40 animate-twinkle pointer-events-none z-0;
-  background-image:
-    radial-gradient(2px 2px at 20% 30%, white, transparent),
-    radial-gradient(2px 2px at 60% 70%, white, transparent),
-    radial-gradient(1px 1px at 50% 50%, white, transparent),
-    radial-gradient(1px 1px at 80% 10%, white, transparent),
-    radial-gradient(2px 2px at 90% 60%, white, transparent),
-    radial-gradient(1px 1px at 33% 80%, white, transparent),
-    radial-gradient(1px 1px at 15% 90%, white, transparent);
-  background-size: 200% 200%;
-}
-
-body::after {
-  content: '';
-  @apply fixed top-0 left-0 w-full h-full opacity-30 animate-twinkle-reverse pointer-events-none z-0;
-  background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(1px 1px at 40% 40%, rgba(255, 255, 255, 0.6), transparent),
-    radial-gradient(1px 1px at 70% 60%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(1px 1px at 25% 75%, rgba(255, 255, 255, 0.5), transparent),
-    radial-gradient(1px 1px at 85% 85%, rgba(255, 255, 255, 0.6), transparent);
-  background-size: 300% 300%;
 }
 
 /* React Flow Customizations */

@@ -40,7 +40,7 @@ export const SubmitButton = () => {
     };
 
     return (
-        <div className="flex items-center justify-center p-5 bg-gradient-to-br from-primary-purple-dark/20 to-primary-purple/15 backdrop-blur-md border-t border-primary-purple-light/20">
+        <div className="flex items-center justify-center p-3 bg-gradient-to-br from-primary-purple-dark/20 to-primary-purple/15 backdrop-blur-md ">
             <button
                 type="submit"
                 onClick={handleSubmit}

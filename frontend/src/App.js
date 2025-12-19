@@ -9,7 +9,7 @@ function App() {
       <div className="flex-1 relative">
         <PipelineUI />
       </div>
-      <div className="p-4 bg-background/50 backdrop-blur-md border-t border-primary-purple-light/20 z-10">
+      <div className="p-4 bg-background/50 backdrop-blur-md z-10 w-[100vw] ">
         <SubmitButton />
       </div>
     </div>
